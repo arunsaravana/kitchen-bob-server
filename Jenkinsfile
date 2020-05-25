@@ -2,10 +2,10 @@
 
 pipeline {
    agent any
-   stages{
+   stages {
      
      stage('SCM') {
-        step {
+        steps {
           mycodecheckout(branch: 'master' , scmUrl:'https://github.com/arunsaravana/kitchen-bob-server.git' ) 
         }
      }
