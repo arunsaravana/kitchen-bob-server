@@ -28,6 +28,11 @@ pipeline {
        
                   }
         }
+      stage('Junit Test') {
+         steps {
+                junittest(props.junitloc.testpath)
+                   }
+        }  
       stage('Sonar Analysis') {
          steps {
                 sonaranalysis()
