@@ -11,3 +11,5 @@ CredId:
 eks:
    ekscluster: 'springbootapp'
    eksregion: 'us-west-2'
+junitloc:
+   testpath: '**/target/surefire-reports/*.xml'
