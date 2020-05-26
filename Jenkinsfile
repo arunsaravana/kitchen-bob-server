@@ -28,6 +28,12 @@ pipeline {
        
                   }
         }
+      stage('Sonar Analysis') {
+         steps {
+                sonaranalysis()
+                   }
+        } 
+    
       stage ('Docker build') {
       steps {
         withCredentials([usernamePassword(
