@@ -8,3 +8,6 @@ dockerhub:
 CredId:
    dockercrid: 'Dockerhub'
    awsid: 'awstest'
+eks:
+   ekscluster: 'springbootapp'
+   eksregion: 'us-west-2'
