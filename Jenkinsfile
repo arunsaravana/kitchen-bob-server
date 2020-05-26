@@ -19,7 +19,7 @@ pipeline {
   }
      stage('SCM') {
         steps {
-          mycodecheckout(branch: 'master' , scmUrl:'https://github.com/arunsaravana/kitchen-bob-server.git' ) 
+          mycodecheckout(branch: props.scm.branch , scmUrl: props.scm.repo) 
         }
      }
       stage('build') {
