@@ -1,9 +1,22 @@
 @Library('akpipeline') _
 
+def loadValuesYaml(){
+def props = readYaml (file: 'template.yml')
+return props;
+ }
+
 pipeline {
    agent any
    stages {
-     
+      
+     stage ('Prepare') {
+     steps {
+        script {
+                props = loadValuesYaml()
+                println props.getClass()
+     }
+    }
+  }
      stage('SCM') {
         steps {
           mycodecheckout(branch: 'master' , scmUrl:'https://github.com/arunsaravana/kitchen-bob-server.git' ) 
