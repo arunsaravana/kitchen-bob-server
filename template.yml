@@ -1,0 +1,10 @@
+scm:
+   branch: 'master'
+   repo: 'https://github.com/arunsaravana/spring-framework-petclinic.git'
+dockerhub:
+   hubuser: 'arunsara'
+   hubrepo: 'ak-kitchen-bob'
+   hubtag: 'kitchen'
+CredId:
+   dockercrid: 'Dockerhub'
+   awsid: 'awstest'
