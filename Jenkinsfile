@@ -38,7 +38,16 @@ pipeline {
         dockerbuild(props.dockerhub.hubuser, props.dockerhub.hubrepo, props.dockerhub.hubtag)
         }
       }
-    }     
+    }
+    
+       stage ('Kube Deploy') {
+      steps {
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: props.CredId.awsid , secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+        kubeupdate(props.eks.eksregion, props.eks.ekscluster)
+        } 
+      }
+    }  
+    
       
    }
 }
