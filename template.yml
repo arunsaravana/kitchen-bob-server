@@ -14,6 +14,6 @@ eks:
 junitloc:
    testpath: '**/target/surefire-reports/*.xml'
 sonar:
-   Sonarserver: 'SonarQube' 
+   server: 'SonarQubeServer' 
    scanner: 'Sonar_Scanner'
    scannerproperties: 'sonar-project.properties'
