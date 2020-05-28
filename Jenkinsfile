@@ -35,7 +35,7 @@ pipeline {
         }  
       stage('Sonar Analysis') {
          steps {
-                sonaranalysis()
+                sonaranalysis(props.sonar.Sonarserver, props.sonar.scanner, props.sonar.scannerproperties)
                    }
         } 
     
