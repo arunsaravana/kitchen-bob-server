@@ -35,9 +35,9 @@ pipeline {
         }  
       stage('Sonar Analysis') {
          steps {
-          echo server: props.sonar.server
-          echo scanner: props.sonar.scanner
-          echo scannerproperties: props.sonar.scannerproperties
+          echo "server: props.sonar.server"
+          echo "scanner: props.sonar.scanner"
+          echo "scannerproperties: props.sonar.scannerproperties"
                 //sonaranalysis(props.sonar.server, props.sonar.scanner, props.sonar.scannerproperties)
                    }
         } 
