@@ -13,3 +13,7 @@ eks:
    eksregion: 'us-west-2'
 junitloc:
    testpath: '**/target/surefire-reports/*.xml'
+sonar:
+   Sonarserver: 'Sonar_Scanner'
+   scanner: 'SonarQube'
+   scannerproperties: 'sonar-project.properties'
