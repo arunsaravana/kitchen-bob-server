@@ -35,10 +35,13 @@ pipeline {
         }  
       stage('Sonar Analysis') {
          steps {
-          echo props.sonar.server
-          echo props.sonar.scanner
-          echo props.sonar.scannerproperties
-                //sonaranalysis(props.sonar.server, props.sonar.scanner, props.sonar.scannerproperties)
+         // echo props.sonar.server
+         //  echo props.sonar.scanner
+         //  echo props.sonar.scannerproperties
+          //sonaranalysis(props.sonar.server, props.sonar.scanner, props.sonar.scannerproperties)
+          withSonarQubeEnv(props.sonar.server) {
+                         sonaranalysis(props.sonar.scannerproperties)                  
+          }
                    }
         } 
     
