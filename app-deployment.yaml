@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: springapp
-        image: arunsara/ak-kitchen-bob:kitchen-BUILD_NUMBER
+        image: IMAGEID
         ports:
         - containerPort: 8080
