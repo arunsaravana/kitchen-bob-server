@@ -35,8 +35,7 @@ pipeline {
                 echo 'Code Coverage'
                 jacoco(
                classPattern: '**/build/classes',
-               sourcePattern: 'src/main/java',
-               exclusionPattern: 'src/test*'
+               sourcePattern: 'src/main/java'
                 )
             }
         }
