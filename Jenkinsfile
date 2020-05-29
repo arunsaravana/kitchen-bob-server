@@ -33,10 +33,12 @@ pipeline {
      stage('JaCoCo') {
             steps {
                 echo 'Code Coverage'
-                jacoco()
-           //    classPattern: '**/build/classes',
-           //    sourcePattern: 'src/main/java',
-           //      exclusionPattern: 'src/test*'
+                jacoco(
+                execPattern: '**/**.exec',
+                classPattern: '**/classes',
+                sourcePattern: '**/src/main/java',
+              //  exclusionPattern: 'src/test*
+                 )
             }
         }
  // Junit Test    
