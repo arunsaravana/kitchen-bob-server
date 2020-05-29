@@ -41,13 +41,7 @@ pipeline {
     
       stage ('Docker build') {
       steps {
-      //  withCredentials([usernamePassword(
-      //      credentialsId: props.CredId.dockercrid,
-      //      usernameVariable: "Username",
-      //      passwordVariable: "Password"
-     //   )]) {
         dockerbuild(props.dockerhub.hubuser, props.dockerhub.hubrepo, props.dockerhub.hubtag, props.CredId.dockercrid)
-     //   }
       }
     }
     
