@@ -30,6 +30,12 @@ pipeline {
        
                   }
         }
+     stage('JaCoCo') {
+            steps {
+                echo 'Code Coverage'
+                jacoco()
+            }
+        }
  // Junit Test    
       stage('Junit Test') {
          steps {
